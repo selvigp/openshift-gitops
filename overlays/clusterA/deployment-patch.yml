@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginxdeployment
 spec:
   replicas: 3  # Increase replicas for Cluster A
   template:
