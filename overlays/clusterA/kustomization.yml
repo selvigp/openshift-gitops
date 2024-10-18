@@ -4,3 +4,6 @@ resources:
 
 patchesStrategicMerge:
   - deployment-patch.yml
+
+# Update the namePrefix to comply with DNS and RFC rules
+namePrefix: "clustera-"  # Use only lowercase letters and hyphens
