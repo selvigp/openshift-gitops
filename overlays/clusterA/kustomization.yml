@@ -1,0 +1,6 @@
+# overlays/clusterA/kustomization.yaml
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - deployment-patch.yaml
