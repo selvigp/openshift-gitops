@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-clusterA
+spec:
+  project: default
+  source:
+    repoURL: 'https://your-git-repo.git'
+    targetRevision: HEAD
+    path: overlays/clusterA  # Path to the Cluster A overlay
+    kustomize:
+      namePrefix: clusterA-
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
