@@ -1,0 +1,11 @@
+# overlays/clusterA/deployment-patch.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3  # Increase replicas for Cluster A
+  template:
+    metadata:
+      labels:
+        env: production  # Add environment-specific label
