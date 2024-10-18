@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://your-git-repo.git'
+    repoURL: 'https://github.com/selvigp/openshift-gitops.git'
     targetRevision: HEAD
     path: overlays/clusterA  # Path to the Cluster A overlay
     kustomize:
