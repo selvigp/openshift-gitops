@@ -2,7 +2,7 @@
 resources:
   - ../../base
 
-patches:
+Patches:
   - deployment-patch.yml
 
 # Update the namePrefix to comply with DNS and RFC rules
