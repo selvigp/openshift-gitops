@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx-application
-        image: quay.io/redhattraining/hello-world-nginx
+        image: quay.io/openshifttest/nginx-alpine
         ports:
         - containerPort: 80
 ---
