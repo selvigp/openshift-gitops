@@ -13,4 +13,4 @@ patches:
         value: 3  # Set the number of replicas for the dev environment
 
 # Update the namePrefix to comply with DNS and RFC rules
-#namePrefix: "clustera-"  # Use only lowercase letters and hyphens
+namePrefix: "clustera-"  # Use only lowercase letters and hyphens
