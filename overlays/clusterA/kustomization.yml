@@ -6,7 +6,7 @@ patches:
   - target:
       kind: Deployment
       name: nginx-deployment  # The name of the resource you want to patch
-      namespace: default  # Optional: Specify the namespace if needed
+      namespace: nginx-test  # Optional: Specify the namespace if needed
     patch: |  # Inline the patch here as a YAML block
       - op: replace
         path: /spec/replicas
