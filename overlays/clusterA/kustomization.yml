@@ -6,7 +6,7 @@ patches:
       kind: Deployment
       name: nginx-deployment  # Specify the target resource's name and kind
     path: deployment-patch.yml
-    #patchType: strategic
+    patchType: strategic
 
 #patches:
 #  - target:
