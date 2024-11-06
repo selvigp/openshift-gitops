@@ -8,4 +8,4 @@ spec:
   template:
     metadata:
       labels:
-        env: production  # Add environment-specific label
+        app: nginx-application  # Add environment-specific label
