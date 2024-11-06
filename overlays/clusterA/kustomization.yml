@@ -2,8 +2,11 @@
 resources:
   - ../../base
 patches:
-  - patch:
-      - path: deployment-patch.yml
+  - target:
+      kind: Deployment
+      name: nginx-deployment  # Specify the target resource's name and kind
+    path: deployment-patch.yaml
+    patchType: strategic
 
 #patches:
 #  - target:
