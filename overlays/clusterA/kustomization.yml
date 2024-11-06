@@ -2,7 +2,8 @@
 resources:
   - ../../base
 patches:
-  - path: deployment-patch.yml
+  - patch:
+      - path: deployment-patch.yml
 
 #patches:
 #  - target:
