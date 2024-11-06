@@ -1,12 +1,16 @@
 # overlays/clusterA/kustomization.yaml
 resources:
   - ../../base
-patches:
-  - target:
-      kind: Deployment
-      name: nginx-deployment  # Specify the target resource's name and kind
-    path: deployment-patch.yaml
-    patchType: strategic
+patchesStrategicMerge:
+  - deployment-patch.yml
+
+
+#patches:
+  #- target:
+    #  kind: Deployment
+    #  name: nginx-deployment  # Specify the target resource's name and kind
+    #path: deployment-patch.yml
+    #patchType: strategic
 
 #patches:
 #  - target:
