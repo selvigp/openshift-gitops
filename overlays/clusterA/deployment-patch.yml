@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 3  # Increase replicas for Cluster A
+  replicas: 2  # Increase replicas for Cluster A
   template:
     metadata:
       labels:
