@@ -24,7 +24,8 @@ spec:
         app: nginx-application
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
+      - image: quay.io/redhattraining/hello-world-nginx 
+      #image: quay.io/rhdevelopers/bgd:1.0.0
         name: nginx-application
         env:
         - name: COLOR
