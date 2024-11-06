@@ -1,1 +1,15 @@
+# overlays/clusterA/kustomization.yaml
+resources:
+  - ../../base
+patches:
+  - target:
+      kind: Deployment
+      name: nginx-application  # The name of the resource you want to patch
+      namespace: nginx-application  # Optional: Specify the namespace if needed
+    patch: |  # Inline the patch here as a YAML block
+      - op: replace
+        path: /spec/template/spec/containers/image
+        value: quay.io/rhdevelopers/bgd:1.0.0  # Set the number of replicas for the dev environment
 
+# Update the namePrefix to comply with DNS and RFC rules
+namePrefix: "clusterb-"  # Use only lowercase letters and hyphens
