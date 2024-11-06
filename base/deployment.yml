@@ -17,27 +17,18 @@ spec:
   selector:
     matchLabels:
       app: nginx-application
-      containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bubble-animation
-        env:
-        - name: COLOR
-          value: "blue"
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: nginx-application
+  strategy: {}
   template:
     metadata:
       labels:
         app: nginx-application
     spec:
       containers:
-      - name: nginx-application
-        image: quay.io/openshifttest/nginx-alpine
-        ports:
-        - containerPort: 80
+      - image: quay.io/rhdevelopers/bgd:1.0.0
+        name: nginx-application
+        env:
+        - name: COLOR
+          value: "blue"
 ---
 apiVersion: v1
 kind: Service
